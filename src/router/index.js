@@ -8,10 +8,10 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    redirect: {name: 'Member'}
+    redirect: '/member'
   },
   {
-    path: '/team',
+    path: '/member',
     name: 'Member',
     component: Member
   },

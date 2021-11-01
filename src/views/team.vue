@@ -1,6 +1,7 @@
 <template>
   <div class="team">
     <navbar/>
+    team
   </div>
 </template>
 
