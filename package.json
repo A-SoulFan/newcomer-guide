@@ -10,8 +10,8 @@
   "dependencies": {
     "ant-design-vue": "^1.7.8",
     "core-js": "^3.6.5",
-    "normalize.css": "^8.0.1",
     "postcss-px-to-viewport": "^1.1.1",
+    "resetcss": "^1.0.3",
     "swiper": "^5.4.5",
     "vue": "^2.6.11",
     "vue-awesome-swiper": "^4.1.1",

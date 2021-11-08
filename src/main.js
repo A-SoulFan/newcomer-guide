@@ -3,7 +3,8 @@ import App from './App.vue'
 import router from './router'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/css/swiper.css'
-import 'normalize.css'
+import 'resetcss';
+
 Vue.config.productionTip = false
 
 Vue.use(VueAwesomeSwiper, /* { default options with global component } */)
