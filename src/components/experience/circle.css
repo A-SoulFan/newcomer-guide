@@ -1,0 +1,22 @@
+.circle {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: -2px;
+    background: rgba(255, 255, 255, .6);
+    border-radius: 50%;
+}
+.circle::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    z-index: 10;
+}
