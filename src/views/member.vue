@@ -1,11 +1,11 @@
 <template>
   <div class="member">
-<!--    <navbar/>-->
-<!--    <persona/>-->
-<!--    <personalExperience/>-->
-<!--    <relatedEntries/>-->
-<!--    <recommendVideo/>-->
+    <navbar/>
+    <persona/>
+    <personalExperience/>
+    <relatedEntries/>
     <personalWorks/>
+    <recommendVideo/>
   </div>
 </template>
 
@@ -19,12 +19,12 @@ import recommendVideo from "../components/recommendVideo/recommendVideo";
 export default {
   name: "member",
   components: {
-    // navbar,
-    // persona,
-    // personalExperience,
-    // relatedEntries,
+    navbar,
+    persona,
+    personalExperience,
+    relatedEntries,
     personalWorks,
-    // recommendVideo
+    recommendVideo
   },
   data () {
     return {
