@@ -12,8 +12,12 @@
       <swiper class="swiper" ref="mySwiper" :options="swiperOption">
         <swiper-slide v-for="item in 10" :key="item"><img src="../../assets/images/personalWorks/test.png" alt=""></swiper-slide>
       </swiper>
-      <div class="swiper-button-prev swiper-btn"></div>
-      <div class="swiper-button-next swiper-btn"></div>
+      <div class="swiper-button-prev swiper-btn">
+        <img src="../../assets/images/personalWorks/circle.png" alt="">
+      </div>
+      <div class="swiper-button-next swiper-btn">
+        <img src="../../assets/images/personalWorks/circle.png" alt="">
+      </div>
     </div>
     <div class="workTitle">
       【A-SOUL/贝&珈&嘉】太潮啦！师徒三人演绎
@@ -86,14 +90,14 @@ export default {
         if (item.classList.contains('wrap')) {
           dom = item
           item.style.opacity = '1'
-          item.style.transform = 'rotateY(360deg)';
+          // item.style.transform = 'rotateY(360deg)';
         }
       })
       itemEl.forEach(el => {
         el.childNodes.forEach(item => {
           if (item.classList.contains('wrap') && item !== dom) {
             item.style.opacity = '0'
-            item.style.transform = 'unset'
+            // item.style.transform = 'unset'
           }
         })
       })
@@ -168,7 +172,7 @@ export default {
       font-size: 14px;
       z-index: 999;
       user-select: none;
-
+      cursor: pointer;
       &:not(:last-child) {
         &::after {
           content: '';
@@ -201,7 +205,7 @@ export default {
         width: 58px;
         height: 84px;
         z-index: 1;
-        transition: .8s all;
+        transition: .6s all;
         opacity: 0;
       }
 
@@ -243,28 +247,25 @@ export default {
       top: calc(50% + 70px);
       transform: translateY(-50%);
       background: url("../../assets/images/personalWorks/arrow.png") no-repeat;
+      background-size: cover;
       &::after {
         display: none;
       }
-      &::before {
-        content: '';
+      img {
         position: absolute;
+        display: inline-block;
         width: 85px;
         height: 84px;
         left: calc(-50% + (-21px));
         top: calc(-50% + (-7px));
         background: url("../../assets/images/personalWorks/circle.png") no-repeat;
-        animation: circle 3s infinite linear;
-      }
-      @keyframes circle {
-        from{
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
+        background-size: cover;
+        &:hover{
+          animation: circle 3s infinite linear;
         }
       }
     }
+
     ::v-deep .swiper-button-prev {
       left: 442px;
     }
@@ -323,6 +324,16 @@ export default {
 
     }
 
+  }
+}
+
+
+@keyframes circle {
+  from{
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 </style>
