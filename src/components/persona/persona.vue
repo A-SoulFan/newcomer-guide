@@ -53,7 +53,7 @@ export default {
 $bg-color:#9AC8E2,#DB7D74,#B8A6D9,#E799B0,#576690;
 .persona {
   width: 100vw;
-  height: 100vh;
+  height: 1080px;
   .member {
     width: inherit;
     height: inherit;

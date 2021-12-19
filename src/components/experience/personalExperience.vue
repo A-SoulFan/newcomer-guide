@@ -39,6 +39,8 @@
 </template>
 
 <script>
+import {calcVw} from "../../tools/tools";
+
 export default {
   name: "personalExperience",
   data() {
@@ -154,7 +156,7 @@ export default {
       for (let i = 0; i <= this.iconList.length; i++) {
         const span = document.createElement('span')
         if (i !== 0 && i !== this.iconList.length) {
-          span.style.left = this.calcVw(sliderWidth * i, 3) + 'vw'
+          span.style.left = calcVw(sliderWidth * i) + 'vw'
         }
         if (i === 0) {
           span.style.left = -1 + 'px'
@@ -209,7 +211,7 @@ export default {
           //滑动条滚动的百分比
           let scrollPercent = ((position / sliderWidth)).toFixed(3)
           //设置内容区滚动
-          this.$refs.swiperContainer.style.setProperty('transform', `translate3D(-${this.calcVw((this.swiperWidth * scrollPercent) * (1 - headSpace))}vw,0,0)`)
+          this.$refs.swiperContainer.style.setProperty('transform', `translate3D(-${calcVw((this.swiperWidth * scrollPercent) * (1 - headSpace))}vw,0,0)`)
           //根据当前滚动区域设置滑块图标和背景
           this.setImgAndBg(position)
         }
@@ -251,12 +253,8 @@ export default {
             return cur + pre
           })
       //设置slide宽度
-      this.$refs.swiperContainer.style.width = this.calcVw(this.swiperWidth) + 'vw'
-    },
-    //px转vw
-    calcVw(num, fractionDigits = 3) {
-      return Number((100 / document.body.clientWidth * num).toFixed(fractionDigits))
-    },
+      this.$refs.swiperContainer.style.width = calcVw(this.swiperWidth) + 'vw'
+    }
   }
 }
 </script>
@@ -266,7 +264,7 @@ export default {
 
 .experience {
   width: 100%;
-  height: 100vh;
+  height: 1080px;
   background: url("../../assets/images/bg/ava.png") no-repeat;
   position: relative;
   background-size: cover;
