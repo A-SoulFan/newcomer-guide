@@ -70,6 +70,7 @@ export default {
         slideToClickedSlide: true,
         loop: true,
         effect: 'coverflow',
+        //把反转修了，自适应只做了幻灯片的
         //grabCursor: true,
         centeredSlides: true,
         slidesPerView: "auto",
