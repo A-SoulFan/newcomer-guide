@@ -2,26 +2,32 @@
   <div class="personalWorks">
     <h1 class="title">个人作品</h1>
     <div class="navbar">
-      <div class="item" @click="toggleWorks($event)" v-for="(item,index) in navBarList" :key="index">
+      <div
+        class="item"
+        @click="toggleWorks($event)"
+        v-for="(item, index) in navBarList"
+        :key="index"
+      >
         <span class="name">{{ item.name }}</span>
-        <img class="fansImg" :src="item.fansImg" :alt="item.name">
-        <img class="wrap" :src="item.wrap" :alt="item.name">
+        <img class="fansImg" :src="item.fansImg" :alt="item.name" />
+        <img class="wrap" :src="item.wrap" :alt="item.name" />
       </div>
     </div>
     <div class="container">
       <swiper class="swiper" ref="mySwiper" :options="swiperOption">
-        <swiper-slide v-for="item in 10" :key="item"><img src="../../assets/images/personalWorks/test.png" alt=""></swiper-slide>
+        <swiper-slide v-for="item in 10" :key="item"
+          ><img src="../../assets/images/personalWorks/test.png" alt=""
+        /></swiper-slide>
       </swiper>
       <div class="swiper-button-prev swiper-btn">
-        <img src="../../assets/images/personalWorks/circle.png" alt="">
+        <img src="../../assets/images/personalWorks/circle.png" alt="" />
       </div>
       <div class="swiper-button-next swiper-btn">
-        <img src="../../assets/images/personalWorks/circle.png" alt="">
+        <img src="../../assets/images/personalWorks/circle.png" alt="" />
       </div>
     </div>
     <div class="workTitle">
-      【A-SOUL/贝&珈&嘉】太潮啦！师徒三人演绎
-      《隔岸 (DJ)》
+      【A-SOUL/贝&珈&嘉】太潮啦！师徒三人演绎 《隔岸 (DJ)》
       <div class="workDate">2021-09-08</div>
     </div>
   </div>
@@ -30,7 +36,7 @@
 <script>
 export default {
   name: "personalWorks",
-  data() {
+  data () {
     return {
       isClick: false,
       navBarList: [
@@ -64,12 +70,12 @@ export default {
         slideToClickedSlide: true,
         loop: true,
         effect: 'coverflow',
-        grabCursor: true,
+        //grabCursor: true,
         centeredSlides: true,
-        slidesPerView: '3',
+        slidesPerView: "auto",
         coverflowEffect: {
-          rotate: 60,
-          stretch: 0,
+          rotate: 30,
+          stretch: -100,
           depth: 100,
           modifier: 1,
           slideShadows: true,
@@ -82,7 +88,7 @@ export default {
     }
   },
   methods: {
-    toggleWorks(e) {
+    toggleWorks (e) {
       const tar = e.target.childNodes || e.target.parentElement.childNodes
       const itemEl = document.querySelectorAll('.item')
       let dom = null
@@ -110,14 +116,14 @@ export default {
 .personalWorks {
   width: 100%;
   height: 1080px;
-  background: url("../../assets/images/personalWorks/bg.png") no-repeat;
+  background: url('../../assets/images/personalWorks/bg.png') no-repeat;
   background-size: cover;
   box-sizing: border-box;
   z-index: -99;
   .title {
     font-size: 48px;
     font-weight: bold;
-    color: #FFFFFF;
+    color: #ffffff;
     position: relative;
     display: block;
     text-align: center;
@@ -182,7 +188,7 @@ export default {
           height: 25px;
           top: 25px;
           right: -50px;
-          background: #FFFFFF;
+          background: #ffffff;
           opacity: 0.5;
         }
       }
@@ -194,7 +200,7 @@ export default {
         display: inline-block;
         transform: translateX(-50%);
         z-index: 99;
-        transition: .3s all;
+        transition: 0.3s all;
         pointer-events: none;
         white-space: nowrap;
         font-size: 14px;
@@ -205,7 +211,7 @@ export default {
         width: 58px;
         height: 84px;
         z-index: 1;
-        transition: .6s all;
+        transition: 0.6s all;
         opacity: 0;
       }
 
@@ -226,7 +232,7 @@ export default {
   .workTitle {
     width: 624px;
     font-size: 30px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin: 0 auto;
 
     .workDate {
@@ -238,15 +244,15 @@ export default {
 
   .container {
     width: 100%;
-    height: 470px;
-    padding-top: 70px;
+    height: 70wh;
+    padding-top: 3vh;
     position: relative;
     .swiper-btn {
       width: 18px;
       height: 35px;
       top: calc(50% + 70px);
       transform: translateY(-50%);
-      background: url("../../assets/images/personalWorks/arrow.png") no-repeat;
+      background: url('../../assets/images/personalWorks/arrow.png') no-repeat;
       background-size: cover;
       &::after {
         display: none;
@@ -258,9 +264,10 @@ export default {
         height: 84px;
         left: calc(-50% + (-21px));
         top: calc(-50% + (-7px));
-        background: url("../../assets/images/personalWorks/circle.png") no-repeat;
+        background: url('../../assets/images/personalWorks/circle.png')
+          no-repeat;
         background-size: cover;
-        &:hover{
+        &:hover {
           animation: circle 3s infinite linear;
         }
       }
@@ -277,8 +284,8 @@ export default {
   }
 
   .swiper {
-    width: 100%;
-    height: 100%;
+    width: 90vw;
+    height: 50vh;
     position: relative;
 
     ::v-deep .swiper-wrapper {
@@ -288,9 +295,9 @@ export default {
 
     ::v-deep .swiper-slide {
       position: relative;
-      width: 400px;
-      height: 400px;
-      transition: all .3s;
+      width: 40vw;
+      height: 45vh;
+      transition: all 0.3s;
 
       img {
         width: 100%;
@@ -302,34 +309,35 @@ export default {
       &::after {
         content: '';
         position: absolute;
-        top: -20px;
-        right: -20px;
-        bottom: -20px;
-        left: -20px;
-        border: 1px solid #FFFFFF;
+        top: -10vh;
+        right: -10vw;
+        bottom: -10vh;
+        left: -10vw;
+        //border: 1px solid #ffffff;
       }
 
       &::before {
         content: '';
+        position: absolute;
         width: 82px;
         height: 71px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        background: url("../../assets/images/personalWorks/play.png") no-repeat;
+        //position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        //transform: translate(-50%, -50%);
+        background: url('../../assets/images/personalWorks/play.png') no-repeat;
         background-size: cover;
         z-index: 999;
       }
-
     }
-
   }
 }
 
-
 @keyframes circle {
-  from{
+  from {
     transform: rotate(0deg);
   }
   to {
