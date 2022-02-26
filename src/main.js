@@ -4,7 +4,9 @@ import router from './router'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/css/swiper.css'
 import 'resetcss';
+import {Anchor} from 'ant-design-vue'
 
+Vue.use(Anchor)
 Vue.config.productionTip = false
 
 Vue.use(VueAwesomeSwiper, /* { default options with global component } */)

@@ -67,75 +67,75 @@ export default {
           img: require('@/assets/images/history/ava.jpg'),
           date: 'September 26',
           describe: `A-SOUL抖音小店于9月26日中午12点正式开张周边上新。
-                  抖音珈乐视频更新，珈乐（Carol），乐华娱乐旗下虚拟偶像女团A-SOUL成员，
-                  组合Vocal担当珈乐（Carol），乐华娱乐旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。
-                  珈乐（Carol）乐华娱乐旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。`,
+                  抖音珈乐视频更新，珈乐（Carol），字节跳动旗下虚拟偶像女团A-SOUL成员，
+                  组合Vocal担当珈乐（Carol），字节跳动旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。
+                  珈乐（Carol）字节跳动旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。`,
           children: {
             date: 'September 26',
             describe: `A-SOUL抖音小店于9月26日中午12点正式开张周边上新。
-                  抖音珈乐视频更新，珈乐（Carol），乐华娱乐旗下虚拟偶像女团A-SOUL成员，
-                  组合Vocal担当珈乐（Carol），乐华娱乐旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。
-                  珈乐（Carol）乐华娱乐旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。`
+                  抖音珈乐视频更新，珈乐（Carol），字节跳动旗下虚拟偶像女团A-SOUL成员，
+                  组合Vocal担当珈乐（Carol），字节跳动旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。
+                  珈乐（Carol）字节跳动旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。`
           }
         },
         {
           img: require('@/assets/images/history/bella.jpg'),
           date: 'September 26',
           describe: `A-SOUL抖音小店于9月26日中午12点正式开张周边上新。
-                  抖音珈乐视频更新，珈乐（Carol），乐华娱乐旗下虚拟偶像女团A-SOUL成员，
-                  组合Vocal担当珈乐（Carol），乐华娱乐旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。
-                  珈乐（Carol）乐华娱乐旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。`,
+                  抖音珈乐视频更新，珈乐（Carol），字节跳动旗下虚拟偶像女团A-SOUL成员，
+                  组合Vocal担当珈乐（Carol），字节跳动旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。
+                  珈乐（Carol）字节跳动旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。`,
           children: {
             date: 'September 26',
             describe: `A-SOUL抖音小店于9月26日中午12点正式开张周边上新。
-                  抖音珈乐视频更新，珈乐（Carol），乐华娱乐旗下虚拟偶像女团A-SOUL成员，
-                  组合Vocal担当珈乐（Carol），乐华娱乐旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。
-                  珈乐（Carol）乐华娱乐旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。`
+                  抖音珈乐视频更新，珈乐（Carol），字节跳动旗下虚拟偶像女团A-SOUL成员，
+                  组合Vocal担当珈乐（Carol），字节跳动旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。
+                  珈乐（Carol）字节跳动旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。`
           }
         },
         {
           img: require('@/assets/images/history/carol.png'),
           date: 'September 26',
           describe: `A-SOUL抖音小店于9月26日中午12点正式开张周边上新。
-                  抖音珈乐视频更新，珈乐（Carol），乐华娱乐旗下虚拟偶像女团A-SOUL成员，
-                  组合Vocal担当珈乐（Carol），乐华娱乐旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。
-                  珈乐（Carol）乐华娱乐旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。`,
+                  抖音珈乐视频更新，珈乐（Carol），字节跳动旗下虚拟偶像女团A-SOUL成员，
+                  组合Vocal担当珈乐（Carol），字节跳动旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。
+                  珈乐（Carol）字节跳动旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。`,
           children: {
             date: 'September 26',
             describe: `A-SOUL抖音小店于9月26日中午12点正式开张周边上新。
-                  抖音珈乐视频更新，珈乐（Carol），乐华娱乐旗下虚拟偶像女团A-SOUL成员，
-                  组合Vocal担当珈乐（Carol），乐华娱乐旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。
-                  珈乐（Carol）乐华娱乐旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。`
+                  抖音珈乐视频更新，珈乐（Carol），字节跳动旗下虚拟偶像女团A-SOUL成员，
+                  组合Vocal担当珈乐（Carol），字节跳动旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。
+                  珈乐（Carol）字节跳动旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。`
           }
         },
         {
           img: require('@/assets/images/history/diana.jpg'),
           date: 'September 26',
           describe: `A-SOUL抖音小店于9月26日中午12点正式开张周边上新。
-                  抖音珈乐视频更新，珈乐（Carol），乐华娱乐旗下虚拟偶像女团A-SOUL成员，
-                  组合Vocal担当珈乐（Carol），乐华娱乐旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。
-                  珈乐（Carol）乐华娱乐旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。`,
+                  抖音珈乐视频更新，珈乐（Carol），字节跳动旗下虚拟偶像女团A-SOUL成员，
+                  组合Vocal担当珈乐（Carol），字节跳动旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。
+                  珈乐（Carol）字节跳动旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。`,
           children: {
             date: 'September 26',
             describe: `A-SOUL抖音小店于9月26日中午12点正式开张周边上新。
-                  抖音珈乐视频更新，珈乐（Carol），乐华娱乐旗下虚拟偶像女团A-SOUL成员，
-                  组合Vocal担当珈乐（Carol），乐华娱乐旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。
-                  珈乐（Carol）乐华娱乐旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。`
+                  抖音珈乐视频更新，珈乐（Carol），字节跳动旗下虚拟偶像女团A-SOUL成员，
+                  组合Vocal担当珈乐（Carol），字节跳动旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。
+                  珈乐（Carol）字节跳动旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。`
           }
         },
         {
           img: require('@/assets/images/history/eileen.jpg'),
           date: 'September 26',
           describe: `A-SOUL抖音小店于9月26日中午12点正式开张周边上新。
-                  抖音珈乐视频更新，珈乐（Carol），乐华娱乐旗下虚拟偶像女团A-SOUL成员，
-                  组合Vocal担当珈乐（Carol），乐华娱乐旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。
-                  珈乐（Carol）乐华娱乐旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。`,
+                  抖音珈乐视频更新，珈乐（Carol），字节跳动旗下虚拟偶像女团A-SOUL成员，
+                  组合Vocal担当珈乐（Carol），字节跳动旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。
+                  珈乐（Carol）字节跳动旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。`,
           children: {
             date: 'September 26',
             describe: `A-SOUL抖音小店于9月26日中午12点正式开张周边上新。
-                  抖音珈乐视频更新，珈乐（Carol），乐华娱乐旗下虚拟偶像女团A-SOUL成员，
-                  组合Vocal担当珈乐（Carol），乐华娱乐旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。
-                  珈乐（Carol）乐华娱乐旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。`
+                  抖音珈乐视频更新，珈乐（Carol），字节跳动旗下虚拟偶像女团A-SOUL成员，
+                  组合Vocal担当珈乐（Carol），字节跳动旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。
+                  珈乐（Carol）字节跳动旗下虚拟偶像女团A-SOUL成员，组合Vocal担当。`
           }
         },
       ],
@@ -414,6 +414,7 @@ export default {
                 font-size: 18px;
                 margin-bottom: 20px;
                 align-self: start;
+                color: #fff;
               }
 
               img {
