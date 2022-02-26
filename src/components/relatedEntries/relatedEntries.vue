@@ -1,5 +1,5 @@
 <template>
-  <div class="relatedEntries">
+  <div class="relatedEntries" id="relatedEntries">
     <h1 class="title">相关词条</h1>
     <div class="entries">
       <div class="wrap">

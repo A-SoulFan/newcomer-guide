@@ -1,5 +1,5 @@
 <template>
-  <div class="persona">
+  <div class="persona" id="persona">
     <ul class="member">
       <li class="item" v-for="item in teamList" :key="item.name">
         <img :src="item.img" :alt="item.eName">

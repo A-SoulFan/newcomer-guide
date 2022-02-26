@@ -1,5 +1,5 @@
 <template>
-  <div class="personalWorks">
+  <div class="personalWorks" id="personalWorks">
     <h1 class="title">个人作品</h1>
     <div class="navbar">
       <div class="item" @click="toggleWorks($event)" v-for="(item,index) in navBarList" :key="index">

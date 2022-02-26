@@ -1,5 +1,5 @@
 <template>
-  <div class="recommend">
+  <div class="recommend" id="recommendVideo">
     <h1 class="title">推荐切片</h1>
     <div class="decorate right"></div>
     <swiper class="swiper" :options="swiperOption">

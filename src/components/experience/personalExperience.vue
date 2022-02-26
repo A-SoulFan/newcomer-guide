@@ -1,5 +1,5 @@
 <template>
-  <div class="experience" ref="main">
+  <div class="experience" ref="main" id="personalExperience">
     <h1 class="title">个人经历</h1>
     <div class="dragArea" ref="area">
       <div class="slider" ref="slider">

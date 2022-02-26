@@ -1,5 +1,5 @@
 <template>
-  <div class="memorabilia">
+  <div class="memorabilia" id="memorabilia">
     <div class="aside">
       <h1 class="aside-title">大事记</h1>
       <p class="aside-date">2022</p>
