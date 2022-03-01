@@ -1,20 +1,23 @@
 <template>
   <div class="team">
-    <navbar/>
-    team
+    <teamWorks />
   </div>
 </template>
 
 <script>
-import navbar from "../components/navbar/navbar";
+import teamWorks from "../components/teamWorks/teamWorks"
 export default {
+
   name: 'team',
   components: {
-    navbar
+    teamWorks,
   },
   data () {
     return {
     }
-  },
+  }
 }
 </script>
+<style>
+</style>
+
