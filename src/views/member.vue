@@ -1,5 +1,5 @@
 <template>
-  <div className="member">
+  <div id="member">
     <navbar id="navbar"/>
     <memorabilia id="memorabilia"/>
     <persona id="persona"/>
