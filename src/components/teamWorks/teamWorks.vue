@@ -1,12 +1,17 @@
 <template>
   <div class="teamWorks">
-    <swiper class="swiper" ref="mySwiper" :options="swiperOption">
+    <swiper
+      class="swiper"
+      ref="mySwiper"
+      :options="swiperOption"
+      @click-slide="handleClickSlide"
+    >
       <swiper-slide
         class="swiper-slide"
         v-for="(item, index) in showList"
         :key="index"
       >
-        <div class="swiperItemBox" @click="toTargetUrl(item.videoUrl)">
+        <div class="swiperItemBox">
           <img :data-src="item.img" class="swiper-lazy" />
           <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
@@ -28,6 +33,7 @@
 </template>
 
 <script>
+// @click-slide="toTargetUrl"
 export default {
   name: 'teamWorks',
   data () {
@@ -54,14 +60,9 @@ export default {
         },
       ],
       swiperOption: {
-        // slideToClickedSlide: true,
         slidesPerView: 3,
         lazy: true,
         loop: true,
-        // navigation: {
-        //   nextEl: ".swiper-button-next",
-        //   prevEl: ".swiper-prev",
-        // },
         effect: 'coverflow',
         coverflowEffect: {
           rotate: 0,
@@ -69,43 +70,24 @@ export default {
           depth: 100,
           modifier: 2,
           slideShadows: true,
-        },
-        // effect: 'creative',
-        // creativeEffect: {
-        //   prev: {
-        //     shadow: true,
-        //     translate: ['-100%', 0, '80px'],
-        //     rotate: [0, 20, 0],
-        //     origin: 'center center',
-        //     scale: 0.95,
-        //   },
-        //   next: {
-        //     translate: ['100%', 0, '80px'],
-        //     rotate: [0, -20, 0],
-        //     origin: 'center center ',
-        //     scale: 0.95,
-        //   },
-        // },
+        }
       },
     }
   },
   methods: {
-    toTargetUrl (url) {
-      window.open(url)
+    handleClickSlide (index, reallyIndex) {
+      // 轮播图点击
+      // 不能使用 swiper-no-swiping，禁止鼠标滑动的同时会让点击没办法获取到真实索引
+      window.open(this.showList[reallyIndex].videoUrl)
     },
     changeSlideToPrev () {
       this.$refs.mySwiper.$swiper.slidePrev()
-      // console.log((this.$refs.mySwiper.$swiper.snapIndex + 1) % 3)
       this.title = this.showList[(this.$refs.mySwiper.$swiper.snapIndex + 1) % 3].title
     },
     changeSlideToNext () {
-
-      // this.activeIndex = this.$refs.mySwiper.$swiper.realIndex
       this.$refs.mySwiper.$swiper.slideNext()
-      // console.log((this.$refs.mySwiper.$swiper.snapIndex + 1) % 3)
-      // console.log(this.showList[this.$refs.mySwiper.$swiper.realIndex].title)
       this.title = this.showList[(this.$refs.mySwiper.$swiper.snapIndex + 1) % 3].title
-
+      // this.videoUrl = this.showList[(this.$refs.mySwiper.$swiper.snapIndex + 1) % 3].videoUrl
     }
   }
 };
