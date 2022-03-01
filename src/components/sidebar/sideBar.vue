@@ -27,17 +27,6 @@ export default {
       ]
      }
   },
-  mounted() {
-    let timeId;
-    window.addEventListener('scroll', () => {
-      // 页面滚动停止100毫秒后才会执行下面的函数。
-      clearTimeout(timeId);
-      timeId = setTimeout(() => {
-        this.scrollToTop();
-        console.log('执行完了哦');
-      }, 100);
-    } , true);
-  },
   methods: {
     showSideBar() {
       this.isShow = !this.isShow

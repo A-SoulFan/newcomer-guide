@@ -1,5 +1,14 @@
 <template>
-  <div id="member">
+  <div class="member">
+    <!--    <a-anchor class="anchor" :target-offset="targetOffset">-->
+    <!--      <a-anchor-link href="#navbar" title="&#45;&#45;&#45;&#45;&#45;&#45;"/>-->
+    <!--      <a-anchor-link href="#memorabilia" title="&#45;&#45;&#45;&#45;&#45;&#45;"/>-->
+    <!--      <a-anchor-link href="#persona" title="persona"/>-->
+    <!--      <a-anchor-link href="#personalExperience" title="personalExperience"/>-->
+    <!--      <a-anchor-link href="#relatedEntries" title="relatedEntries"/>-->
+    <!--      <a-anchor-link href="#personalWorks" title="personalWorks"/>-->
+    <!--      <a-anchor-link href="#recommendVideo" title="recommendVideo"/>-->
+    <!--    </a-anchor>-->
     <navbar id="navbar"/>
     <memorabilia id="memorabilia"/>
     <persona id="persona"/>
@@ -45,5 +54,19 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.anchor {
+  position: fixed;
+  left: 10px;
+  top: 50vh;
+  transform: translateY(-50%);
+  z-index: 99999;
+  ::v-deep .ant-anchor-wrapper {
+    background: unset;
+    .ant-anchor-ink {
+      display: none;
+    }
+  }
+}
+
 
 </style>
