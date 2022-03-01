@@ -64,12 +64,13 @@ export default {
         slideToClickedSlide: true,
         loop: true,
         effect: 'coverflow',
-        grabCursor: true,
+        //把反转修了，自适应只做了幻灯片的
+        //grabCursor: true,
         centeredSlides: true,
-        slidesPerView: '3',
+        slidesPerView: 'auto',
         coverflowEffect: {
-          rotate: 60,
-          stretch: 0,
+          rotate: 30,
+          stretch: -100,
           depth: 100,
           modifier: 1,
           slideShadows: true,
@@ -238,8 +239,8 @@ export default {
 
   .container {
     width: 100%;
-    height: 470px;
-    padding-top: 70px;
+    height: 70vh;
+    padding-top: 3vh;
     position: relative;
     .swiper-btn {
       width: 18px;
@@ -277,8 +278,8 @@ export default {
   }
 
   .swiper {
-    width: 100%;
-    height: 100%;
+    width: 90vw;
+    height: 50vh;
     position: relative;
 
     ::v-deep .swiper-wrapper {
@@ -288,9 +289,9 @@ export default {
 
     ::v-deep .swiper-slide {
       position: relative;
-      width: 400px;
-      height: 400px;
-      transition: all .3s;
+      width: 40vw;
+      height: 45vh;
+      transition: all 0.3s;
 
       img {
         width: 100%;
@@ -302,28 +303,29 @@ export default {
       &::after {
         content: '';
         position: absolute;
-        top: -20px;
-        right: -20px;
-        bottom: -20px;
-        left: -20px;
-        border: 1px solid #FFFFFF;
+        top: -10vh;
+        right: -10vw;
+        bottom: -10vh;
+        left: -10vw;
+        //border: 1px solid #ffffff;
       }
 
       &::before {
         content: '';
+        position: absolute;
         width: 82px;
         height: 71px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        background: url("../../assets/images/personalWorks/play.png") no-repeat;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        //transform: translate(-50%, -50%);
+        background: url('../../assets/images/personalWorks/play.png') no-repeat;
         background-size: cover;
         z-index: 999;
       }
-
     }
-
   }
 }
 
