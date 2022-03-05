@@ -1,15 +1,6 @@
 <template>
   <div class="member">
-    <!--    <a-anchor class="anchor" :target-offset="targetOffset">-->
-    <!--      <a-anchor-link href="#navbar" title="&#45;&#45;&#45;&#45;&#45;&#45;"/>-->
-    <!--      <a-anchor-link href="#memorabilia" title="&#45;&#45;&#45;&#45;&#45;&#45;"/>-->
-    <!--      <a-anchor-link href="#persona" title="persona"/>-->
-    <!--      <a-anchor-link href="#personalExperience" title="personalExperience"/>-->
-    <!--      <a-anchor-link href="#relatedEntries" title="relatedEntries"/>-->
-    <!--      <a-anchor-link href="#personalWorks" title="personalWorks"/>-->
-    <!--      <a-anchor-link href="#recommendVideo" title="recommendVideo"/>-->
-    <!--    </a-anchor>-->
-    <navbar id="navbar"/>
+    <head-slider id="head" />
     <memorabilia id="memorabilia"/>
     <persona id="persona"/>
     <personalExperience id="personalExperience"/>
@@ -20,7 +11,7 @@
 </template>
 
 <script>
-import navbar from "../components/navbar/navbar";
+import headSlider from "../components/head/head";
 import persona from "../components/persona/persona";
 import personalExperience from '../components/experience/personalExperience'
 import relatedEntries from '../components/relatedEntries/relatedEntries'
@@ -31,7 +22,7 @@ import memorabilia from "../components/memorabilia/memorabilia";
 export default {
   name: "member",
   components: {
-    navbar,
+    headSlider,
     persona,
     personalExperience,
     relatedEntries,
@@ -41,32 +32,12 @@ export default {
   },
   data() {
     return {
-      swiperOption: {
-        direction: 'vertical'
-      },
-      targetOffset: undefined
+
     }
   },
-  mounted() {
-    this.targetOffset = window.innerHeight / 2;
-  }
 }
 </script>
 
 <style scoped lang="scss">
-.anchor {
-  position: fixed;
-  left: 10px;
-  top: 50vh;
-  transform: translateY(-50%);
-  z-index: 99999;
-  ::v-deep .ant-anchor-wrapper {
-    background: unset;
-    .ant-anchor-ink {
-      display: none;
-    }
-  }
-}
-
 
 </style>
