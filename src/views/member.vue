@@ -1,6 +1,6 @@
 <template>
   <div class="member">
-    <head-slider id="head" />
+    <head-slider/>
     <memorabilia id="memorabilia"/>
     <persona id="persona"/>
     <personalExperience id="personalExperience"/>

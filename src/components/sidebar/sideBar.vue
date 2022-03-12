@@ -17,7 +17,7 @@ export default {
     return {
       isShow:false,
       bar:[
-          {title:'首页',id:0,anchor:'#top'},
+          {title:'首页',id:0,anchor:'https://www.asoulfan.com/'},
           {title:'大事记',id:1,anchor:'#memorabilia'},
           {title:'人设',id:2,anchor:'#persona'},
           {title:'个人经历',id:3,anchor:'#personalExperience'},

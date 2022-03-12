@@ -1,18 +1,23 @@
 <template>
   <div class="head">
+    <div class="navbar">
+      <a href="">团员介绍</a>
+      <a href="">团队介绍</a>
+      <a href="https://www.asoulfan.com/">返回主页</a>
+    </div>
     <div class="swiper-wrapper">
       <swiper ref="mySwiper" class="swiper" :options="swiperOption">
         <swiper-slide v-for="link in imgList" :key="link">
           <img :src="link" alt="">
         </swiper-slide>
-      </swiper>
-      <div class="swiper-pagination">
-        <div v-for="item in 3" :key="item" class="ignore-pagination-item">
-          <svg class="ignore-pagination-svg">
-            <circle></circle>
-          </svg>
+        <div class="swiper-pagination" slot="pagination">
+          <!--        <div v-for="item in 3" :key="item" class="ignore-pagination-item">-->
+          <!--          <svg class="ignore-pagination-svg">-->
+          <!--            <circle></circle>-->
+          <!--          </svg>-->
+          <!--        </div>-->
         </div>
-      </div>
+      </swiper>
     </div>
     <div class="content">
       <div class="pic">
@@ -34,12 +39,12 @@
 <script>
 export default {
   name: "headCarousel",
-  data () {
+  data() {
     return {
       imgList: [
-          require('../../assets/images/bg/headBg.png'),
-          require('../../assets/images/bg/eileen.png'),
-          require('../../assets/images/bg/diana.png'),
+        require('../../assets/images/bg/headBg.png'),
+        require('../../assets/images/bg/eileen.png'),
+        require('../../assets/images/bg/diana.png'),
       ],
       swiperOption: {
         effect: 'fade',
@@ -49,17 +54,39 @@ export default {
           clickable: true,
           type: 'custom',
           renderCustom(swiper, current) {
-            console.log(current);
             const pagination = document.querySelectorAll('.ignore-pagination-item')
             // 判断是不是激活焦点，是的话添加active类
-            pagination.forEach(item => {
-              if (pagination[current - 1] === item) {
-                item.classList.add('active')
+            // pagination.forEach(item => {
+            //   if (pagination[current - 1] === item) {
+            //     item.classList.add('active')
+            //   } else {
+            //     item.classList.remove('active')
+            //   }
+            // })
+            let paginationHtml = ' ';
+            for (let i = 0; i < 3; i++) {
+              // 判断是不是激活焦点，是的话添加active类，不是就只添加基本样式类
+              if (i === current - 1) {
+                paginationHtml += `
+                  <div class="ignore-pagination-item active">
+                    <svg class="ignore-pagination-svg">
+                      <circle></circle>
+                    </svg>
+                  </div>
+                `
               } else {
-                item.classList.remove('active')
+                paginationHtml += `
+                  <div class="ignore-pagination-item">
+                    <svg class="ignore-pagination-svg">
+                      <circle></circle>
+                    </svg>
+                  </div>
+                `
               }
-            })
-          },
+            }
+            return paginationHtml;
+          }
+        }
         //   renderBullet(index, className) {
         //     return `
         //     <div v-for="item in 3" :key="item" class="ignore-pagination-item">
@@ -69,7 +96,6 @@ export default {
         // </div>
         //     `
         //   },
-        }
       }
     }
   },
@@ -79,7 +105,7 @@ export default {
     }
   },
   methods: {
-    toggleSwiper(e,index) {
+    toggleSwiper(e, index) {
       // this.swiper.pagination.el.click()
       // console.log(this.swiper.pagination.el)
       // console.log(this.swiper,this.$refs.mySwiper);
@@ -100,6 +126,26 @@ export default {
   width: 100vw;
   height: 1080px;
   position: relative;
+
+  .navbar {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 48px;
+    right: 195px;
+
+    a {
+      font-size: 18px;
+      color: #FFFFFF;
+
+      &:hover {
+        color: antiquewhite;
+
+      }
+    }
+  }
+
   .content {
     position: absolute;
     top: 379px;
@@ -107,23 +153,28 @@ export default {
     right: 435px;
     bottom: 381px;
     z-index: 999;
+
     .title {
       margin: 38px 0;
       color: #fff;
       font-size: 96px;
       font-family: YouSheBiaoTiHei;
       font-weight: 400;
+
       span {
         color: #FF8772;
+
         &:first-child {
           margin: 0 20px;
         }
       }
     }
+
     p {
       font-size: 16px;
       color: #FFFFFF;
     }
+
     .pic {
       //position: absolute;
       margin: 0 auto;
@@ -136,8 +187,11 @@ export default {
       }
     }
   }
+
   .swiper-wrapper {
     position: relative;
+    z-index: -1;
+
     &:after {
       content: '';
       top: 0;
@@ -145,15 +199,17 @@ export default {
       bottom: 0;
       left: 0;
       position: absolute;
-      background: rgba(0,0,0,.5);
+      background: rgba(0, 0, 0, .5);
       z-index: 9;
     }
-      .swiper-slide {
-        img {
-          width: 100%;
-          height: 100%;
-        }
+
+    .swiper-slide {
+      img {
+        width: 100%;
+        height: 100%;
       }
+    }
+
     .swiper-pagination {
       width: 50px;
       height: 100%;
@@ -164,14 +220,15 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      z-index: 99;
       .active {
         & circle {
-          cx:10;
-          cy:10;
-          r:10;
+          cx: 10;
+          cy: 10;
+          r: 10;
           width: 100%;
           height: 100%;
-          fill:none;
+          fill: none;
           stroke-width: 2;
           stroke: #FF8772;
           stroke-linecap: round;
@@ -179,7 +236,7 @@ export default {
           stroke-dashoffset: 40;
           animation: animate 6s linear infinite;
           @keyframes animate {
-            0%,100% {
+            0%, 100% {
               stroke-dashoffset: 40;
             }
             50% {
@@ -191,6 +248,7 @@ export default {
           }
         }
       }
+
       .ignore-pagination-item {
         width: 14px;
         height: 14px;
@@ -202,16 +260,19 @@ export default {
         z-index: 999;
         animation: rotate 4s linear infinite;
       }
-      .ignore-pagination-svg{
+
+      .ignore-pagination-svg {
         position: absolute;
         left: -3px;
         top: -3px;
         width: 20px;
         height: 20px;
         border-radius: 50%;
+
         & circle {
           fill: transparent;
         }
+
         @keyframes rotate {
           from {
             transform: rotate(0deg);
